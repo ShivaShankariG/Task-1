@@ -11,7 +11,16 @@ import NotificationsIcon from 'material-ui/svg-icons/social/notifications';
 import MailIcon from 'material-ui/svg-icons/communication/mail-outline';
 
 
-
+const styles={
+  posi:
+  {
+    position: 'fixed',
+   
+    
+    left:'130px',
+    
+  }
+}
 class TabsExampleIconText extends React.Component
 {
   constructor(props) {
@@ -24,19 +33,10 @@ class TabsExampleIconText extends React.Component
   render(){
       if(this.props.context=="main"){
     return(
-  <Tabs tabItemContainerStyle={{width: '400px'}}  inkBarStyle ={{background: lightBlue500 }} className="Tabss">>
-    <Tab
-  icon={<ActionHome/>}
-      label="Home"
-    />
-    <Tab
-    icon={<NotificationsIcon/>}
-      label="Notifications"
-    />
-    <Tab
-      icon={<MailIcon/>}
-      label="Messages"
-    />
+  <Tabs tabItemContainerStyle={{width: '400px', height: '60px'}}  inkBarStyle ={{background: lightBlue500 }} style={styles.posi}>>
+    <Tab icon={<ActionHome/>} label="Home"/>
+    <Tab icon={<NotificationsIcon/>} label="Notifications"/>
+    <Tab icon={<MailIcon/>} label="Messages" />
   </Tabs>
 );
 }

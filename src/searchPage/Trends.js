@@ -47,10 +47,7 @@ class Trends extends React.Component
             <p style={styles.p}> 15.3k tweets </p>
             <h3 style={styles.h3} ><a href="www.google.com"  style={{color:lightBlue500 }} >Hasura </a></h3>
             <p style={styles.p}> 12k tweets </p>
-            <h3 style={styles.h3} ><a href="www.google.com"  style={{color:lightBlue500 }} >#INternship </a></h3>
-            <p style={styles.p}> 18k tweets </p>
-
-        </div>
+           </div>
       </div>
 
     );

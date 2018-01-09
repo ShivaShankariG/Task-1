@@ -81,6 +81,7 @@ class ExampleComponent extends React.Component {
   render() {
     return (
       <div>
+
           <div style={styles.Container1}>
 
             <Paper zDepth={1} style={styles.Child1}>

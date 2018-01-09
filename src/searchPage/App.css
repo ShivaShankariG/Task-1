@@ -3,6 +3,8 @@
     font-family: Arial;
     padding: 20;
     overflow-y: scroll;
+    margin-left: 150;
+    margin-right: 150;
 }
 
 .App-logo {
@@ -17,7 +19,10 @@
   color: white;
 }
 .App-body{
-  background-color: #E0E0E0;
+  background-color: '#E0E0E0';
+  margin-left: 150;
+    margin-right: 150;
+    
 }
 .App-title {
   font-size: 1.5em;
@@ -43,10 +48,13 @@ a:hover {
     color: #2196F3;
 }
 
+
 /* selected link */
 a:active {
     color: blue;
 }
+
+
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }

@@ -9,13 +9,15 @@ import {lightBlue500 ,grey700 ,yellowA700,white, cyan500, brown900  } from 'mate
 import Papers from './Papers';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import AppBar from 'material-ui/AppBar';
-import PaperExampleSimple from './PaperExampleSimple';
 import ExampleComponent from './ExampleComponent';
 import IconButtonExampleSize from './IconButtonExampleSize';
 import AppBarExampleIcon from './AppBarExampleIcon';
+//import felxLayout from './flexLayout';
+import Flex from './Flex'
+import ScrollArea from 'react-scrollbar';
 
 const muiTheme = getMuiTheme({
-
+ //backgroundColor: '#E0E0E0',
   tabs: {
     backgroundColor: white,
      textColor: grey700,
@@ -25,25 +27,35 @@ const muiTheme = getMuiTheme({
 
 });
 
-class App extends Component {
+const styles={
+  
+  body: {
+    marginLeft: 130,
+    marginRight: 130,
+    backgroundColor : '#E0E0E0',
+  }
+}
+
+class searchPage extends Component {
   render() {
     return (
       <MuiThemeProvider muiTheme={muiTheme}>
-
-
-        <Toolbar className="App" Id='1'/>
-        <AppBarExampleIcon/>
-        <Toolbar className="App" Id='search'/>
-      <br/>
       <div >
+     
+       
+        <Toolbar className="App" Id='1'/>
+        <hr/>
+       
+          
+           
+            <br/><div style={{backgroundColor:'#E0E0E0'}}>
 
-     <style>{'body { background-color: #EEEEEE; }'}</style>
-        <Papers/>
-      </div>
-
+        <Flex/>
+        </div>
+        </div>
       </MuiThemeProvider>
     );
   }
 }
 
-export default App;
+export default searchPage;

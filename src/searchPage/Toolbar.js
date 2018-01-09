@@ -13,10 +13,20 @@ import AvatarExampleSimple from './AvatarExampleSimple';
 import RaisedButton1 from './RaisedButton1';
 import Avatar from 'react-avatar';
 import {Tabs, Tab} from 'material-ui/Tabs';
+import TextArea from './TextArea';
 
 import {lightBlue500 ,grey700 ,yellowA700,white, cyan500, brown900, blue500 } from 'material-ui/styles/colors';
 
-
+const styles=
+{
+  styles:{
+    backgroundColor: 'white',
+     position: 'fixed',
+    
+     width: '100%',
+      
+  }
+}
 export default class ToolbarExamplesSimple extends React.Component {
 
   constructor(props) {
@@ -31,26 +41,29 @@ export default class ToolbarExamplesSimple extends React.Component {
     if(this.props.Id=='1')
     {
     return (
-      <Toolbar  style={{backgroundColor: 'white' , width: '100%' , height:'50%'}} >
+      <div>
+      <Toolbar  style={styles.styles} >
         <ToolbarGroup firstChild={true} >
           <TabsExampleIconText context="main"/>
         </ToolbarGroup>
         <br/>
         <ToolbarGroup>
-            <Avatar  size="40" src="http://www.agnc.org.uk/media/1027568/twitterbird.png" round= "true" />
+            <Avatar  size="40" src="http://www.agnc.org.uk/media/1027568/twitterbird.png" round= "true" style={{position: 'fixed', left: 850,}} />
         </ToolbarGroup>
 
-        <ToolbarGroup>
-          <TextFieldExampleSimple hinttext="aadhaar" />
+        <ToolbarGroup style={{position: 'fixed', right: 300,}}>
+          <TextFieldExampleSimple hinttext="search"  />
         </ToolbarGroup>
-        <ToolbarGroup>
+        <ToolbarGroup style={{position: 'fixed',top:5, right: 240,}}>
               <Avatar  size="40" src="https://twirpz.files.wordpress.com/2015/06/twitter-avi-gender-balanced-figure.png?w=1280" round="true"/>
         </ToolbarGroup>
-        <ToolbarGroup>
+        <ToolbarGroup style={{position: 'fixed', right: 130, top: 10}}>
           <RaisedButton1 text="Tweet"/>
         </ToolbarGroup>
 
       </Toolbar>
+      <br/>
+      </div>
     );
   }
   else if(this.props.Id=='2')
@@ -63,7 +76,7 @@ export default class ToolbarExamplesSimple extends React.Component {
         <br/>
 
         <ToolbarGroup>
-          <TextFieldExampleSimple hinttext="What's happening?"/>
+        <TextArea/>
         </ToolbarGroup>
 
 

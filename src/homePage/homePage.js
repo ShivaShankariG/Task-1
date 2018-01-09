@@ -5,43 +5,35 @@ import Toolbar from './Toolbar';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import TabsExampleIconText from './TabsExampleIconText';
 import {lightBlue500 ,grey700 ,yellowA700,white, cyan500, brown900  } from 'material-ui/styles/colors';
-
 import Papers from './Papers';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import AppBar from 'material-ui/AppBar';
+import PaperExampleSimple from './PaperExampleSimple';
 import ExampleComponent from './ExampleComponent';
 import IconButtonExampleSize from './IconButtonExampleSize';
 import AppBarExampleIcon from './AppBarExampleIcon';
-
 const muiTheme = getMuiTheme({
-
-  tabs: {
+tabs: {
     backgroundColor: white,
      textColor: grey700,
      selectedTextColor: lightBlue500,
   },
-
-
 });
 
-class App extends Component {
+export default class homePage extends Component {
   render() {
     return (
       <MuiThemeProvider muiTheme={muiTheme}>
-
-
         <Toolbar className="App" Id='1'/>
-      
-      <br/>
-      <div >
-
-     <style>{'body { background-color: #EEEEEE; }'}</style>
+        <AppBarExampleIcon/>
+        <Toolbar className="App" Id='search'/>
+        <br/>
+        <div >  
+        <style>{'body { background-color: #EEEEEE; }'}</style>
         <Papers/>
-      </div>
-
-      </MuiThemeProvider>
+        </div>
+        </MuiThemeProvider>
     );
   }
 }
 
-export default App;

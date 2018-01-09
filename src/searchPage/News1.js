@@ -35,7 +35,8 @@ export default class CardExampleControlled extends React.Component {
 
   render() {
     return (
-      <Card>
+      <div style={{backgroundColor:'#E0E0E0'}}>
+      <Card >
       <IconMenu
         iconButtonElement={
           <IconButton touch={true} tooltip="More"
@@ -89,6 +90,7 @@ export default class CardExampleControlled extends React.Component {
           </IconButton>
       </CardActions>
     </Card>
+    </div>
     );
   }
 }
